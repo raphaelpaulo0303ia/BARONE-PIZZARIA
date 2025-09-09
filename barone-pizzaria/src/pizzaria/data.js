@@ -1,17 +1,16 @@
 // src/pizzaria/data.js
-
-export const BIZ = {
+export const NEGOCIOS = {
   brandName: "BARONE PIZZARIA",
   address: "Av. Beira-Mar, 123 – Bairro Central",
   instagram: "@barone.pizzaria",
-  whatsappE164: "+5581999990000", // troque pelo número real no formato E164
+  whatsappE164: "+5581999990000", // troque para o real no formato E164
   openHours: "18h–23h",
-  colors: {
-    primary: "#3E5395",   // exemplo
-    secondary: "#FBC02D", // exemplo
-    basil: "#43A047",
-    charcoal: "#121212",
-    cream: "#FFF8E1",
+  cores: {
+    primário: "#3E5395",
+    secundário: "#FBC02D",
+    manjericão: "#43A047",
+    carvão: "#121212",
+    creme: "#FFFBE1",
   },
 };
 
@@ -23,14 +22,16 @@ export const CATEGORIES = [
   { id: "bebidas", name: "Bebidas" },
 ];
 
-// Preencha com seu menu real:
 export const MENU = [
+  // exemplo
   {
+    id: 1,
     name: "Calabresa",
-    description: "Mussarela, calabresa, cebola roxa e orégano.",
+    description:
+      "Mussarela, calabresa, cebola roxa e orégano.",
     price: 39.9,
     category: "tradicionais",
-    img: "https://images.unsplash.com/photo-154..." // opcional
+    img: "https://images.unsplash.com/photo-1542831231-1c1b0f3f3d12",
   },
   // ...demais itens
 ];
