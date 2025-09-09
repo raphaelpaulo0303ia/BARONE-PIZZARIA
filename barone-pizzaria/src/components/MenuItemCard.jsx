@@ -1,13 +1,16 @@
-
-import { NEGOCIOS as BIZ, CATEGORIAS, MENU } from "../pizzaria/data";
+// src/components/MenuItemCard.jsx
+import { NEGOCIOS as BIZ } from "../pizzaria/data";
 import { money } from "../pizzaria/money";
-
 
 export default function MenuItemCard({ item, onOrder }) {
   return (
     <div className="bg-white rounded-2xl shadow-sm overflow-hidden border">
       {item.img && (
-        <img src={item.img} alt={item.name} className="w-full h-40 object-cover" />
+        <img
+          src={item.img}
+          alt={item.name}
+          className="w-full h-40 object-cover"
+        />
       )}
 
       <div className="p-4">
@@ -15,24 +18,26 @@ export default function MenuItemCard({ item, onOrder }) {
           <h3 className="text-lg font-semibold">{item.name}</h3>
           <span
             className="px-2 py-1 rounded text-sm font-bold"
-            style={{ backgroundColor: BIZ.colors.cream, color: BIZ.colors.charcoal }}
+            style={{
+              backgroundColor: BIZ.cores.creme,
+              color: BIZ.cores.carvão,
+            }}
           >
-            R$ {item.price.toFixed(2)}
+            {money(item.price)}
           </span>
         </div>
 
         {item.description && (
           <p className="text-sm text-gray-600 mt-2">{item.description}</p>
         )}
-
-        <button
-          onClick={() => onOrder(item)}
-          className="mt-3 w-full py-2 rounded-lg font-semibold text-white"
-          style={{ backgroundColor: BIZ.colors.primary }}
-        >
-          Pedir pelo WhatsApp
-        </button>
       </div>
+
+      <button
+        onClick={() => onOrder(item)}
+        className="w-full bg-green-500 hover:bg-green-600 text-white py-2 font-semibold rounded-b-2xl"
+      >
+        Adicionar
+      </button>
     </div>
   );
 }
