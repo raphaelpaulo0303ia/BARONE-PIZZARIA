@@ -1,5 +1,5 @@
 // src/components/MenuItemCard.jsx
-import { NEGOCIOS as BIZ, CATEGORIAS, MENU } from "../pizzaria/data";
+import { NEGOCIOS as BIZ } from "../pizzaria/data";
 import { money } from "../pizzaria/money";
 
 export default function MenuItemCard({ item, onOrder }) {
