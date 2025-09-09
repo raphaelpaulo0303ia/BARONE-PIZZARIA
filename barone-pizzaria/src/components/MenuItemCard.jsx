@@ -1,7 +1,7 @@
 
-// src/components/MenuItemCard.jsx
-import React from "react";
-import { BIZ } from "../pizzaria/data";
+import { NEGOCIOS as BIZ, CATEGORIAS, MENU } from "../pizzaria/data";
+import { money } from "../pizzaria/money";
+
 
 export default function MenuItemCard({ item, onOrder }) {
   return (
